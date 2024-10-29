@@ -11,8 +11,24 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        'backgroundPrimary': '#D9D9D9',
+        'headerPrimary': '#F1F0F3'
       },
     },
+    screens: {
+      'sm': '320px',
+      // => @media (min-width: 640px) { ... }
+
+      'md': '640px',
+      // => @media (min-width: 768px) { ... }
+
+      'lg': '1024px',
+      // => @media (min-width: 1024px) { ... }
+
+      'xl': '1200px',
+
+
+    }
   },
   plugins: [],
 };
