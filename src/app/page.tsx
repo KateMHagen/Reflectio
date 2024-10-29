@@ -1,10 +1,19 @@
 // To Run App: pnpm dev
 
+import Link from "next/link";
+
 export default function Home() {
   return (
     <div>
-      <h1 className="bg-blue-500">yo wassup</h1>
      
+     <Link
+        key='Home'
+        href='./home'
+        className='flex h-[48px] w-auto rounded-md mb-1 p-3  text-lg hover:bg-sky-100 hover:text-blue-600'
+    >
+      <p className="hidden md:block">Home</p>
+    </Link>
+       
     </div>
   );
 }
