@@ -1,4 +1,4 @@
-import Events from '@/app/ui/events';
+import Events from '@/app/components/events';
 export default function Page() {
     return (
         <>
