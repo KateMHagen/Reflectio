@@ -10,7 +10,7 @@ export default function Page() {
                     <div className='border-solid border-4 sm:w-[80%] lg:w-[48%] lg:float-right h-[450px] sm:m-2 lg:m-0 lg:mt-6'></div>
                     
                 </div>
-                <div>yooo</div>
+                
         {/* // <div className="sm:flex md:flex lg:grid md:grid-cols-[80%_20%] lg:grid-cols-[80%_20%] gap-7 w-full ">
             
         //     <div>
