@@ -11,25 +11,7 @@ export default function Page() {
                     
                 </div>
                 
-        {/* // <div className="sm:flex md:flex lg:grid md:grid-cols-[80%_20%] lg:grid-cols-[80%_20%] gap-7 w-full ">
-            
-        //     <div>
-        //         <header className='sticky top-0 bg-headerPrimary pt-12 '>
-        //             <div className="flex items-end">
-        //                 <p>Home</p>
-        //                 <div className="text-xs font-normal flex ml-auto pr-3">
-        //                     <p className="pr-3">Recent Memories</p>
-        //                     <p>Campus Highlights</p>
-        //                 </div>
-        //             </div>
-        //         </header>
-                
-        //     </div>
-        //     <div className=" sm:hidden md:hidden lg:block  ">
-        //         <Events/>
-        //     </div>
-            
-        // </div> */}
+   
         </>
     )
     
