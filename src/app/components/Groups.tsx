@@ -4,13 +4,13 @@ export default function Events() {
         <>
             <header className='sticky top-0 bg-headerPrimary pt-12'>
                 <p>
-                    Events
+                    Groups
                 </p>
                 
                 
             </header>
             <div>
-            <p>hrtil</p>
+            <p className="text-sm font-semibold">Suggested groups</p>
             </div>
         </>
         

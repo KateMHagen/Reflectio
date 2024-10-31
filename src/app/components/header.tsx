@@ -8,7 +8,7 @@ export default function Header(){
                         
                         <div className="sm:text-[10px] md:text-xs font-normal flex ml-auto ">
                             <p className="pr-3">Recent Memories</p>
-                            <p>Campus Highlights</p>
+                            <p>Event Highlights</p>
                         </div>
                     </div>
                 </header>

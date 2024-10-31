@@ -14,13 +14,12 @@ export default function SideNav() {
     const pathname = usePathname();
     const {openUserProfile} = useClerk()
     const links = [
-        { name: 'Home', href: '/profile/home', icon: <TiHome size={25} /> },
+        { name: 'Home', href: '/profile', icon: <TiHome size={25} /> },
         { name: 'Memory Wall', href: '/profile/memorywall', icon: <FaImages size={25}/> },
         { name: 'Favorites', href: '/profile/favorites', icon: <FaHeart size={25}/>},
         { name: 'Notifications', href: '/profile/notifications', icon: <FaBell size={25}/>},
         { name: 'Friends', href: '/profile/friends', icon: <FaUserFriends size={25}/>},
         { name: 'Settings', href: '/profile/settings', icon: <IoSettings size={25}/>},
-        { name: 'Profile', href: '/profile', icon: <CgProfile size={25}/>},
         { name: 'Sign Out', href: '', icon: <FaSignOutAlt size={25}/> },
     ];
 

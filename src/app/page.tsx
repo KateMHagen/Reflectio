@@ -1,16 +1,26 @@
-// To Run App: pnpm dev
-import Link from "next/link";
+'use client';
 
-export default function Home() {
-  return (
-    <div>
-      <Link
-          key='Home'
-          href='./profile'
-          className='flex h-[48px] w-auto rounded-md mb-1 p-3  text-lg hover:bg-sky-100 hover:text-blue-600'
-      >
-        <p className="hidden md:block">Home</p>
-      </Link> 
-    </div>
+import { useUser } from '@clerk/nextjs';
+import { useRouter } from 'next/navigation';
+import { useEffect } from 'react';
+
+export default function RootPage(){
+  const router = useRouter()
+  return ( 
+    <RedirectToProfile/>
   );
 }
+
+function RedirectToProfile() {
+  const { isSignedIn } = useUser();
+  const router = useRouter();
+
+  useEffect(() => {
+    if (isSignedIn) {
+      router.push('/profile');  // Redirect to profile page
+    }
+  }, [isSignedIn, router]);
+
+  return null; // Render nothing as we're only redirecting
+}
+ 
