@@ -21,7 +21,7 @@ export default function SuggestedFriends(){
                     <CgProfile size={30}/>
                     <span className="ml-1 font-semibold">Kate Hagen</span>
                 </div>
-                <span>Follow</span>
+                <span>Followw</span>
             </div>
             <div className="flex items-center justify-between text-xs">
                 <div className="flex items-center">
