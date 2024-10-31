@@ -2,7 +2,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import clsx from 'clsx';
-import { useClerk } from '@clerk/clerk-react'
+import { useClerk, useUser } from '@clerk/clerk-react'
 
 import { TiHome } from "react-icons/ti";
 import { FaImages, FaHeart, FaBell, FaUserFriends, FaSignOutAlt } from "react-icons/fa";
@@ -10,16 +10,20 @@ import { IoSettings } from "react-icons/io5";
 import { CgProfile } from "react-icons/cg";
 import { SignOutButton } from '@clerk/nextjs';
 
+
 export default function SideNav() {
     const pathname = usePathname();
     const {openUserProfile} = useClerk()
+    const { user } = useUser()
+    const username = user?.username 
+    
     const links = [
-        { name: 'Home', href: '/profile', icon: <TiHome size={25} /> },
-        { name: 'Memory Wall', href: '/profile/memorywall', icon: <FaImages size={25}/> },
-        { name: 'Favorites', href: '/profile/favorites', icon: <FaHeart size={25}/>},
-        { name: 'Notifications', href: '/profile/notifications', icon: <FaBell size={25}/>},
-        { name: 'Friends', href: '/profile/friends', icon: <FaUserFriends size={25}/>},
-        { name: 'Settings', href: '/profile/settings', icon: <IoSettings size={25}/>},
+        { name: 'Home', href: `/profile/${username}`, icon: <TiHome size={25} /> },
+        { name: 'Memory Wall', href: `/profile/${username}/memorywall`, icon: <FaImages size={25}/> },
+        { name: 'Favorites', href: `/profile/${username}/favorites`, icon: <FaHeart size={25}/>},
+        { name: 'Notifications', href: `/profile/${username}/notifications`, icon: <FaBell size={25}/>},
+        { name: 'Friends', href: `/profile/${username}/friends`, icon: <FaUserFriends size={25}/>},
+        { name: 'Settings', href: `/profile/${username}/settings`, icon: <IoSettings size={25}/>},
         { name: 'Sign Out', href: '', icon: <FaSignOutAlt size={25}/> },
     ];
 

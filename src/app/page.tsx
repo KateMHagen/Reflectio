@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 import { useEffect } from 'react';
 
 export default function RootPage(){
-  const router = useRouter()
+  
   return ( 
     <RedirectToProfile/>
   );
@@ -14,10 +14,12 @@ export default function RootPage(){
 function RedirectToProfile() {
   const { isSignedIn } = useUser();
   const router = useRouter();
-
+  const { user } = useUser()
+  const username = user?.username
+  
   useEffect(() => {
     if (isSignedIn) {
-      router.push('/profile');  // Redirect to profile page
+      router.push(`/profile/${username}`);  // Redirect to profile page
     }
   }, [isSignedIn, router]);
 
