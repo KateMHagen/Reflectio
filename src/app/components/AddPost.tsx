@@ -22,7 +22,7 @@ export default function AddPost() {
                     <div className="flex items-center gap-2 cursor-pointer">
                         <RiVideoAddFill size={20} />
                         Video
-                    </div>
+                    </div> 
                 </div>
             </div>
         </div>
