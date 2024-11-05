@@ -1,6 +1,6 @@
-lockfileVersion: '9.0'
+lockfileVersion: '8.0'
 
-.npmrc:
+settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
